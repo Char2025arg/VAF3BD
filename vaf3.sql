@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2025 a las 22:27:05
+-- Tiempo de generación: 13-10-2025 a las 00:44:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `vaf3`
 --
-CREATE DATABASE IF NOT EXISTS `vaf3` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `vaf3`;
 
 -- --------------------------------------------------------
 
@@ -104,7 +102,12 @@ CREATE TABLE `vehiculos` (
 INSERT INTO `vehiculos` (`id`, `nombre`, `descripcion`, `fuente_poder`, `destino`, `ruta_imagen`) VALUES
 (1, 'DeLorean', 'El DeLorean Máquina del Tiempo fue el invento más exitoso del Dr. Emmett Brown, una máquina del tiempo impulsada por plutonio construida sobre un automóvil deportivo DeLorean DMC-12 que tenía que alcanzar 88 millas por hora, o bien, aproximadamente 140 kilómetros por hora, para poder viajar en el tiempo.', 'Reactor nuclear, más tarde un Sr. Fusión tras un viaje a 2015', 'Destruido por una locomotora diesel el 27 de octubre de 1985', 'DeLorean maquina del tiempo.png'),
 (2, 'DeLorean DMC-12', 'El DeLorean DMC-12 es el único modelo de auto deportivo fabricado por la DeLorean Motor Company (DMC) entre 1981 y 1983. Sus características más distintivas incluyen su carrocería de acero inoxidable cepillado sin pintar y sus icónicas puertas de ala de gaviota. A pesar de su diseño futurista, el DMC-12 es un coche de culto que alcanzó la fama mundial como la máquina del tiempo en la saga de películas Regreso al Futuro', 'N/A', 'N/A', 'DeLorean DMC-12.png'),
-(3, 'BMW 733i', 'La familia McFly poseía un BMW 733i en 1985. Este era conducido por George McFly, y era el auto familiar principal. Su matrícula era 3A709T8.Antes de que Marty McFly regresara a 1955, Biff Tannen había tomado prestado y destrozado otro auto propiedad de George, un Chevrolet Nova, mientras bebía y conducía, arruinando así los planes de Marty de ir al lago con Jennifer Parker para el fin de semana. Después de que Marty regresara a lo que resultó ser un presente alterado y mejorado, el auto cambió a un BMW, de una sola pieza, y Biff lo estaba encerando con las dos capas de cera que le gustaban a George.', 'N/A', 'N/A', 'BMW 733i.png');
+(3, 'BMW 733i', 'La familia McFly poseía un BMW 733i en 1985. Este era conducido por George McFly, y era el auto familiar principal. Su matrícula era 3A709T8.Antes de que Marty McFly regresara a 1955, Biff Tannen había tomado prestado y destrozado otro auto propiedad de George, un Chevrolet Nova, mientras bebía y conducía, arruinando así los planes de Marty de ir al lago con Jennifer Parker para el fin de semana. Después de que Marty regresara a lo que resultó ser un presente alterado y mejorado, el auto cambió a un BMW, de una sola pieza, y Biff lo estaba encerando con las dos capas de cera que le gustaban a George.', 'N/A', 'N/A', 'BMW 733i.png'),
+(4, 'Tren del tiempo Julio Verne', 'El Tren del Tiempo era una máquina del tiempo en sí misma que funcionaba con vapor en lugar de gasolina, construida entre 1885 y 1895, lo que le llevó diez años construirla. Cuando Doc tuvo éxito en su primera prueba de desplazamiento temporal, él y su familia viajaron a 2015 o más allá para realizarle una conversión a flotación', 'El condensador de flujo aún estaba incluido en este diseño, ubicado en el lugar del faro en la parte delantera de la locomotora. A diferencia del DeLorean, los componentes externos del Tren del Tiempo eran simétricos en ambos lados del vehículo, lo que posiblemente representaba una comprensión más sofisticada de la tecnología de viaje en el tiempo por parte de Doc, a pesar de haber sido construido con materiales más primitivos.', 'N/A', 'Tren del tiempo de Jule Verne.png'),
+(5, 'Toyota Hilux', 'En 1985, Statler Toyota recibió una entrega de una camioneta nueva pintada de negro. Cuando Marty McFly regresó de 1955, el presente mejorado ubicó el vehículo en su garaje y él estaba en posesión de las llaves. Su matrícula era 2EZP916.', 'N/A', 'N/A', 'Toyota Hilux.png'),
+(6, 'Aerotabla', 'Una aerotabla era un vehículo con forma de tabla, con conversión a flotación, popular en 2015, similar a un monopatín', 'N/A', 'N/A', 'Aerotabla.png'),
+(7, 'Ford Convertible Super Deluxe', 'Biff Tannen poseía un modelo convertible de 1946 en 1955, pintado de negro con interior rojo, y apodado \"Sheila\". Su número de matrícula era 6H 96472.Biff era la única persona que conocía el truco para encender el motor (un botón en el salpicadero), como le explicó a Terry en Western Auto, quien no había podido arrancar el coche mientras trabajaba en él y se preguntó si estaba equipado con un interruptor de seguridad (kill-switch):', 'N/A', 'N/A', 'Ford Convertible Super Deluxe.png'),
+(8, 'Locomotora 131', 'Locomotora 131 es una antigua locomotora de vapor de la Central Pacific Railroad, que transportaba trenes de pasajeros y de carga en un circuito de un solo sentido por una vía única. En su ruta hacia el oeste, se detenía en la Estación de Ferrocarril de Hill Valley, teniendo a San Francisco, California, como el final de la línea.', 'La máquina es una locomotora de vapor antigua, de tipo Ten-Wheeler (Diez Ruedas), 4-6-0 (dos ejes delanteros seguidos de tres ejes motrices) y que funciona con madera como combustible.', 'N/A', 'Locomotora 131.png');
 
 --
 -- Índices para tablas volcadas
@@ -148,7 +151,7 @@ ALTER TABLE `personajes`
 -- AUTO_INCREMENT de la tabla `vehiculos`
 --
 ALTER TABLE `vehiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
