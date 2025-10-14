@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2025 a las 00:44:56
+-- Tiempo de generación: 14-10-2025 a las 20:10:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `vaf3`
 --
+CREATE DATABASE IF NOT EXISTS `vaf3` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vaf3`;
 
 -- --------------------------------------------------------
 
@@ -34,7 +36,7 @@ CREATE TABLE `peliculas` (
   `nombre_director` varchar(50) NOT NULL,
   `duracion` int(11) NOT NULL,
   `fecha` varchar(50) NOT NULL,
-  `sinapsis_peli` varchar(200) NOT NULL,
+  `sinapsis_peli` text NOT NULL,
   `ruta_imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,9 +45,9 @@ CREATE TABLE `peliculas` (
 --
 
 INSERT INTO `peliculas` (`id`, `nombre_pelicula`, `nombre_escritor`, `nombre_director`, `duracion`, `fecha`, `sinapsis_peli`, `ruta_imagen`) VALUES
-(1, 'Volver al futuro', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 116, '1985', 'El adolescente Marty McFly es amigo de Doc, un científico que ha construido una máquina del tiempo. Cuando los dos prueban el artefacto, un error fortuito hace que Marty llegue a 1955, año en el que s', 'vaf1.png'),
-(2, 'Volver al futuro II', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 108, '1989', 'Aunque a Marty McFly todavía le falta tiempo para asimilar el hecho de estar viviendo dentro de la familia perfecta gracias a su anterior viaje en el tiempo, no le queda ni espacio para respirar cuand', 'vaf2.png'),
-(3, 'Volver al futuro III', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 118, '1990', 'Marty McFly sigue en 1955 y su amigo Doc ha retrocedido al año 1885, la época del salvaje oeste. Éste le envía una carta donde comenta que la máquina del tiempo está averiada, y que es imposible repar', 'vaf3.png');
+(1, 'Volver al futuro', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 116, '1985', 'El adolescente Marty McFly es amigo de Doc, un científico que ha construido una máquina del tiempo. Cuando los dos prueban el artefacto, un error fortuito hace que Marty llegue a 1955, año en el que sus padres iban al instituto y todavía no se habían conocido. Después de impedir su primer encuentro, Marty deberá conseguir que se conozcan y se enamoren, de lo contrario su existencia no sería posible.', 'vaf1.png'),
+(2, 'Volver al futuro II', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 108, '1989', 'Aunque a Marty McFly todavía le falta tiempo para asimilar el hecho de estar viviendo dentro de la familia perfecta gracias a su anterior viaje en el tiempo, no le queda ni espacio para respirar cuando su amigo Doc aparece de improviso con la máquina del tiempo (mucho más modernizada), e insta a que le acompañen él y su novia a viajar al futuro para solucionar un problema con la ley que tendrá uno de sus futuros hijos. En la tremenda vorágine futurista, con todo lo que ello conlleva, del Hill Valley de 2015, la presencia de tales viajeros temporales causará un efecto mayor que el que iban a arreglar. Un almanaque deportivo y la posesión del secreto de la existencia de la máquina del tiempo por parte del siempre villano Biff Tannen, serán los ingredientes que conjugarán una causa-efecto en el pasado, en el presente y en el propio futuro, que hará que Marty y Doc se tengan que emplear a fondo para poner fin a la catástrofe a la que les lleva el destino.', 'vaf2.png'),
+(3, 'Volver al futuro III', 'Bob Gale y Robert Zemeckis', 'Robert Zemeckis', 118, '1990', 'Marty McFly sigue en 1955 y su amigo Doc ha retrocedido al año 1885, la época del salvaje oeste. Éste le envía una carta donde comenta que la máquina del tiempo está averiada, y que es imposible repararla. Sin embargo no le preocupa estar atrapado en el pasado, pues allí es muy feliz trabajando de herrero aunque convive con malhechores. Pero Marty descubre una vieja tumba en la que lee que Doc murió en 1885 y, sin pensárselo dos veces, irá a rescatar a su amigo.', 'vaf3.png');
 
 -- --------------------------------------------------------
 
